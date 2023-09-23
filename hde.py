@@ -59,10 +59,10 @@ def main():
                 file_mtime = os.path.getmtime(file)
 
                 if file_ctime > previous_ts or file_mtime > previous_ts:
-                    pod_name = os.path.basename(os.path.dirname(file))
+                    dir_name = os.path.basename(os.path.dirname(file))
                     file_name = os.path.basename(file)
-                    pod_file_name = pod_name + "_" + file_name
-                    gcs_path = GCSBUCKET + pod_file_name
+                    dir_file_name = dir_name + "_" + file_name
+                    gcs_path = GCSBUCKET + dir_file_name
                     logging.info("Issuing Command: gsutil cp " + file + " " + gcs_path)
                     copy_to_gcs(file, gcs_path)
 
