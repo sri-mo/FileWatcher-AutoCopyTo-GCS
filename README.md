@@ -1,7 +1,27 @@
-# hde
-Heap Dump Exporter
+# Heap Dump Exporter service for Google Kubernetes Engine
 
-Here's a summary of the code:
+# Overview
+This Python script provides a solution for monitoring specific files and directories in a specified path and copying them to Google Cloud Storage (GCS) when they have been created or modified. 
+The script is designed for use cases where you need to continuously monitor files and ensure that they are fully written before copying them to GCS.
+This script is particularly valuable for efficiently exporting heap dumps generated within a Kubernetes POD to Google Cloud Storage (GCS).
+
+# Features
+- Monitors files and directories in the specified path. <br />
+- Copies files to a specified GCS bucket when they are created or modified. <br />
+- Ensures that files are fully written before initiating the copy operation. <br />
+- Supports error handling and logging to keep track of the copying process. <br />
+- Configurable sleep duration between monitoring iterations. <br />
+
+# Prerequisites
+Before using the script, ensure the following prerequisites are met: <br />
+- Python environment with required dependencies. <br />
+- Google Cloud SDK configured with appropriate permissions. <br />
+- Properly set values for GCSBUCKET and GCPPROJECT variables. <br />
+
+# Error Handling
+The script includes error handling to catch and log any issues related to setting up the GCP project or copying files to GCS. You can review the logs for debugging and monitoring purposes.
+
+# Summary of the code
 
 Configuration variables: <br />
 &nbsp; GCSBUCKET: Specifies the destination GCS bucket. <br />
