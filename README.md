@@ -3,11 +3,11 @@ Heap Dump Exporter
 
 Here's a summary of the code:
 
-Configuration variables:<br />
-   GCSBUCKET: Specifies the destination GCS bucket.<br />
-   GCPPROJECT: Specifies the Google Cloud project ID.<br />
-   WATCHPATH: Specifies the path to monitor for files and directories.<br />
-   SLEEP: Specifies the sleep duration between iterations.<br />
+Configuration variables: <br />
+&nbsp; GCSBUCKET: Specifies the destination GCS bucket. <br />
+&nbsp; GCPPROJECT: Specifies the Google Cloud project ID. <br />
+&nbsp; WATCHPATH: Specifies the path to monitor for files and directories. <br />
+&nbsp; SLEEP: Specifies the sleep duration between iterations. <br />
 
 set_gcp_project(project_name): A function to set the Google Cloud project using the gcloud command-line tool.
 
