@@ -1,9 +1,9 @@
-# Heap Dump Exporter service for Google Kubernetes Engine
+# Continuous File Monitoring and GCS Copy Utility
 
 # Overview
-This Python script provides a solution for monitoring specific files and directories in a specified path and copying them to Google Cloud Storage (GCS) when they have been created or modified. 
-The script is designed for use cases where you need to continuously monitor files and ensure that they are fully written before copying them to GCS.
-This script is particularly valuable for efficiently exporting heap dumps generated within a Kubernetes POD to Google Cloud Storage (GCS).
+This Python utility provides a solution for monitoring specific files and directories in a specified path and copying them to Google Cloud Storage (GCS) when they have been created or modified. 
+The utility is designed for use cases where you need to continuously monitor files and ensure that they are fully written before copying them to GCS.
+The script automates the process of monitoring and copying files, eliminating the need for manual intervention. This utility is particularly valuable in scenarios where the seamless export of thread dumps, Out-of-Memory (OOM) generated heap dumps, or other critical data is essential. For example, imagine a Kubernetes environment where applications produce thread dumps and heap dumps when encountering issues. Manually exporting and managing these dumps can be time-consuming and error-prone. With this script in place, these dumps are automatically monitored and swiftly copied to Google Cloud Storage (GCS) for further analysis, ensuring that crucial diagnostic data is readily available for troubleshooting and problem resolution.
 
 # Features
 - Monitors files and directories in the specified path. <br />
